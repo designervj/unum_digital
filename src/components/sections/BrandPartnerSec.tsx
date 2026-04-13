@@ -1,162 +1,160 @@
 "use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import Link from "next/link";
 
 const BrandPartnerSec = () => {
-  const { t } = useTranslation();
-
   const partners = [
     {
       id: 1,
       title: "Coaching.com",
-      category: t("partners.cat_illustration"),
+      category:
+        "Creative Direction, Platform & Online Educational Delivery system UX & UI, Video Direction and Production...",
       image: "/assets/Image/img1.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/cdc"
+      link: "/who-we-create-for/cdc",
     },
     {
       id: 2,
       title: "MySkin & Poliderma",
-      category: t("partners.cat_illustration"),
+      category: "Branding, Web Design, Package Design",
       image: "/assets/Image/Rectangle 1815.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/poliderma"
+      link: "/who-we-create-for/poliderma",
     },
     {
       id: 3,
       title: "Castania",
-      category: t("partners.cat_illustration"),
+      category: "Branding, Web Design, Package Design, Branding Strategy",
       image: "/assets/Image/Rectangle 1831.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/castania"
+      link: "/who-we-create-for/castania",
     },
     {
       id: 4,
       title: "Navada",
-      category: t("partners.cat_storyboard"),
+      category: "Branding & Copyright, Illustration, Package design",
       image: "/assets/Image/Rectangle 1813.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/navada"
+      link: "/who-we-create-for/navada",
     },
     {
       id: 5,
-      title: "L'oreal Revitalift",
-      category: t("partners.cat_direction"),
+      title: "L’oreal Revitalift",
+      category: "Direction and Storyboard",
       image: "/assets/Image/Rectangle 1814.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/loreal"
+      link: "/who-we-create-for/loreal",
     },
     {
       id: 6,
       title: "Minglanje V Klanjcu",
-      category: t("partners.cat_minglanje"),
+      category: "Direction, Design",
       image: "/assets/Image/Rectangle1828.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/minglanje-v-klanjcu"
+      link: "/who-we-create-for/minglanje-v-klanjcu",
     },
     {
       id: 7,
       title: "Karlo Ban",
-      category: t("partners.cat_illustration"),
+      category: "Branding, Web Design, Video Production & Direction",
       image: "/assets/Image/Rectangle 1821.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/karlo-ban"
+      link: "/who-we-create-for/karlo-ban",
     },
     {
       id: 8,
       title: "Samoborski Tamburatorij",
-      category: t("partners.cat_illustration"),
+      category: "Creative Direction, Branding, Photography",
       image: "/assets/Image/Rectangle 1832.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/local-boutique-brands"
+      link: "/who-we-create-for/local-boutique-brands",
     },
     {
       id: 9,
       title: "MyRent - Case Study",
-      category: t("partners.cat_concept"),
+      category: "Marketing Strategy, UX, SEO, Content Creation",
       image: "/assets/Image/Rectangle 1826.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/myrent"
+      link: "/who-we-create-for/myrent",
     },
     {
       id: 10,
       title: "Vila Lovelos",
-      category: t("partners.cat_minglanje"),
+      category: "Web Design, Video Production & Direction, Storyboard",
       image: "/assets/Image/Frame.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/tourism-travel"
+      link: "/who-we-create-for/tourism-travel",
     },
     {
       id: 11,
       title: "Marcia Reynolds",
-      category: t("partners.cat_minglanje"),
+      category: "Branding, Funnel & Landing Page Design, Video Production",
       image: "/assets/Image/Rectangle 1827.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/education-e-learning"
+      link: "/who-we-create-for/education-e-learning",
     },
     {
       id: 12,
       title: "EXO - Life and Beyond Story",
-      category: t("partners.cat_concept"),
+      category: "Concept, direction and storyboard",
       image: "/assets/Image/Rectangle 1876.png",
       gridCols: "md:col-span-2",
-      link: "/who-we-create-for/expo-life-far-beyond"
+      link: "/who-we-create-for/expo-life-far-beyond",
     },
     {
       id: 13,
-      title: "IDS Branding",
-      category: t("partners.cat_minglanje"),
-      image: "/assets/Image/Rectangle 1878.png",
+      title: "TIS Group Rebranding",
+      category: "Branding, Web Design, Illustration",
+      image: "/assets/Image/tis-img.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/ids"
+      link: "/who-we-create-for/tis-group-rebranding",
     },
     {
       id: 14,
       title: "Casa Horizontes",
-      category: t("partners.cat_minglanje"),
+      category: "Branding, Web Design",
       image: "/assets/Image/Rectangle 1879.png",
       gridCols: "md:col-span-1",
-      link: "/who-we-create-for/tourism-travel"
+      link: "/who-we-create-for/tourism-travel",
     },
   ];
 
   return (
-    <section className="bg-[#161E23] py-16 md:py-28 px-4 md:px-10">
-      <div className="container-xl mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-[40px] font-semibold text-white mb-4">
-           Some of the stories that we had privilege to co-create!
+    <section className="bg-[#101a21] px-4 py-12 md:px-8 md:py-20 lg:px-10">
+      <div className="mx-auto max-w-[1220px]">
+        <div className="mb-12 text-center md:mb-16">
+          <h2 className="text-[28px] font-semibold tracking-[-0.03em] text-white md:text-[40px]">
+            Some of the stories that we had privilege to co-create!
           </h2>
-          <p className="text-white text-base md:text-lg">
-          More than just work – these are the stories of inspiring creative partnerships.
+          <p className="mx-auto mt-4 max-w-[760px] text-[14px] leading-[1.7] text-white/75 md:text-[18px]">
+            More than just work – these are the stories of inspiring creative
+            partnerships.
           </p>
         </div>
 
-        {/* Brand / Portfolio Grid exactly matching the reference */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-4 md:gap-x-5 md:gap-y-10">
           {partners.map((partner) => (
             <Link
               href={partner.link}
               key={partner.id}
-              className={`flex flex-col group ${partner.gridCols}`}
+              className={`group flex flex-col ${partner.gridCols}`}
             >
-              {/* Image Container */}
-              <div className="w-full h-[220px] md:h-[260px] lg:h-[280px] rounded-2xl overflow-hidden mb-4 bg-gray-100 flex-shrink-0">
-                <img
-                  src={partner.image}
-                  alt={partner.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              <div className="mb-3 overflow-hidden rounded-[18px] bg-white/5">
+                <div className="h-[220px] w-full sm:h-[260px] md:h-[228px] lg:h-[238px]">
+                  <img
+                    src={partner.image}
+                    alt={partner.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
               </div>
 
-              {/* Text Below Image */}
-              <div className="flex flex-col pl-1">
-                <h3 className="text-white text-[16px] md:text-[18px] font-semibold mb-1 group-hover:text-[#3EDA00] transition-colors">
+              <div className="px-[2px]">
+                <h3 className="text-[18px] font-semibold leading-[1.25] text-white transition-colors duration-300 group-hover:text-[#dfe7ee] md:text-[17px] lg:text-[18px]">
                   {partner.title}
                 </h3>
-                <p className="text-white text-[13px] md:text-[14px] italic">
+                <p className="mt-1 text-[11px] italic leading-[1.5] text-white/75 md:text-[11px]">
                   {partner.category}
                 </p>
               </div>
