@@ -262,10 +262,9 @@ export default function LeadsAdminPage() {
   };
 
   const tabButtonClass = (value: TabKey) =>
-    `rounded-xl border px-3 py-2 text-sm font-semibold transition ${
-      tab === value
-        ? "border-[#37C100] bg-[#f4fbf1] text-[#1f7a39]"
-        : "border-[#d7dfdb] bg-white text-muted-foreground hover:bg-[#f4fbf1]"
+    `rounded-xl border px-3 py-2 text-sm font-semibold transition ${tab === value
+      ? "border-[#31AC00] bg-[#f4fbf1] text-[#1f7a39]"
+      : "border-[#d7dfdb] bg-white text-muted-foreground hover:bg-[#f4fbf1]"
     }`;
 
   return (
@@ -380,9 +379,8 @@ export default function LeadsAdminPage() {
                       <tr
                         key={id || `${lead.email}-${lead.createdAt}`}
                         onClick={() => void handleOpenLead(lead)}
-                        className={`cursor-pointer border-b border-[#f1f3f5] transition ${
-                          selected ? "bg-[#f4fbf1]" : "hover:bg-[#f9fafb]"
-                        }`}
+                        className={`cursor-pointer border-b border-[#f1f3f5] transition ${selected ? "bg-[#f4fbf1]" : "hover:bg-[#f9fafb]"
+                          }`}
                       >
                         <td className="px-2 py-3 font-semibold uppercase">{lead.formType}</td>
                         <td className="px-2 py-3">{lead.name}</td>
@@ -487,7 +485,7 @@ export default function LeadsAdminPage() {
               <button
                 onClick={() => void handleSaveLead()}
                 disabled={savingDetail}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#37C100] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#2d9802] disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#31AC00] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#2d9802] disabled:opacity-60"
               >
                 {savingDetail ? (
                   <>

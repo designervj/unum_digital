@@ -15,6 +15,8 @@ import HomeHeroSec from "@/components/sections/HomeHeroSec";
 import HomeHeroSection from "@/components/sections/HomeHeroSection";
 import Testimonials from "@/components/sections/Testimonialsnew";
 import Testimonialsnew from "@/components/sections/Testimonialsnew";
+import AboutSection from "@/components/sections/AboutSection";
+import ContactFormsSec from "@/components/sections/ContactFormsSec";
 
 const pettyProducts: Product[] = [
   { id: "p1", name: "Petty 173mm", priceEUR: 220, image: "/assets/products/product-img.png", size: "173mm" },
@@ -37,15 +39,17 @@ export default function HomePage() {
     <main>
       {/* <Hero /> */}
       {/* <HomeHeroSec/> */}
-      <HomeHeroSection/>
+      <HomeHeroSection />
       <SliderBrand />
 
       {/* <AboutStrip /> */}
       <OurWork />
-        <CTASection />
-       
+      <CTASection />
+    
       <BrandPartnerSec />
-    <Testimonialsnew/>
+      <Testimonialsnew />
+        <AboutSection />
+        <ContactFormsSec/>
       {/* <IdeaInSightPage/> */}
     </main>
   );

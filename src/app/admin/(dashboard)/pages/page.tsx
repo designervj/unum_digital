@@ -247,7 +247,7 @@ export default function PagesCmsPage() {
             <button
               onClick={() => void fetchDocs()}
               disabled={loading}
-              className="flex items-center gap-1.5 rounded-xl border border-[#d7dfdb] bg-white px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-[#1D2931] transition-all hover:bg-[#f4fbf1] hover:border-[#37C100] active:scale-95 disabled:opacity-50"
+              className="flex items-center gap-1.5 rounded-xl border border-[#d7dfdb] bg-white px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-[#1D2931] transition-all hover:bg-[#f4fbf1] hover:border-[#31AC00] active:scale-95 disabled:opacity-50"
             >
               <RotateCw size={12} className={loading ? "animate-spin" : ""} />
               {t.common.refresh}
@@ -265,16 +265,14 @@ export default function PagesCmsPage() {
                   <button
                     key={route.key}
                     onClick={() => setSelectedRouteKey(route.key)}
-                    className={`w-full rounded-xl border px-3 py-2.5 text-left transition ${
-                      isActive ? "border-[#b9d9a7] bg-[#f4fbf1]" : "hover:bg-muted"
-                    }`}
+                    className={`w-full rounded-xl border px-3 py-2.5 text-left transition ${isActive ? "border-[#b9d9a7] bg-[#f4fbf1]" : "hover:bg-muted"
+                      }`}
                   >
                     <div className="flex items-start justify-between gap-2">
                       <p className="text-sm font-bold text-foreground">{route.label}</p>
                       <span
-                        className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em] ${
-                          doc ? "bg-[#eaf8df] text-[#1f7a39]" : "bg-slate-100 text-slate-600"
-                        }`}
+                        className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em] ${doc ? "bg-[#eaf8df] text-[#1f7a39]" : "bg-slate-100 text-slate-600"
+                          }`}
                       >
                         {doc ? t.pages_cms.route_status.configured : t.pages_cms.route_status.pending}
                       </span>
@@ -299,8 +297,8 @@ export default function PagesCmsPage() {
               <div className={cn(
                 "flex items-center gap-1.5 rounded-full px-3 py-1 text-[9px] font-black uppercase tracking-widest border",
                 status === "published" ? "bg-[#eaf8df] text-[#1f7a39] border-[#b9d9a7]" :
-                status === "draft" ? "bg-amber-50 text-amber-700 border-amber-200" :
-                "bg-slate-50 text-slate-600 border-slate-200"
+                  status === "draft" ? "bg-amber-50 text-amber-700 border-amber-200" :
+                    "bg-slate-50 text-slate-600 border-slate-200"
               )}>
                 {status === "published" ? <Globe size={10} /> : status === "draft" ? <Clock size={10} /> : <Archive size={10} />}
                 {status}
@@ -329,7 +327,7 @@ export default function PagesCmsPage() {
                   className="h-10 w-full rounded-xl border border-[#e5e7eb] px-2"
                 >
                   <option value="draft">draft</option>
-                  <option value="published">published</option> 
+                  <option value="published">published</option>
 
                   <option value="archived">archived</option>
                 </select>
@@ -414,7 +412,7 @@ export default function PagesCmsPage() {
               <button
                 onClick={() => void handleSave()}
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-2xl bg-[#37C100] px-10 py-3 text-[11px] font-black uppercase tracking-widest text-white transition-all hover:bg-[#2d9802] shadow-xl shadow-[#37C100]/20 active:scale-95 disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-2xl bg-[#31AC00] px-10 py-3 text-[11px] font-black uppercase tracking-widest text-white transition-all hover:bg-[#2d9802] shadow-xl shadow-[#31AC00]/20 active:scale-95 disabled:opacity-60"
               >
                 {saving ? (
                   <>

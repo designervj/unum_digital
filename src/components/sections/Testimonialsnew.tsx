@@ -134,7 +134,7 @@ export default function Testimonialsnew() {
                 <h3 className="text-[13px] font-semibold text-white md:text-[18px]">
                   {current.name}
                 </h3>
-                <p className="mt-1 text-[10px] text-white/45 md:text-[14px]">
+                <p className="mt-1 text-[10px] text-white/90 md:text-[14px]">
                   {current.role}
                 </p>
               </div>
@@ -146,10 +146,10 @@ export default function Testimonialsnew() {
                     key={index}
                     className={`md:px-7 ${index !== 0 ? "md:border-l md:border-white/10" : ""} ${index === 0 ? "md:pl-0" : ""}`}
                   >
-                    <h4 className="text-[30px] font-light tracking-[-0.04em] text-white md:text-[48px]">
+                    <h4 className="text-[30px] font-semibold tracking-[-0.04em] text-[#7997A8] md:text-[50px]">
                       {stat.value}
                     </h4>
-                    <p className="mt-2 max-w-[220px] text-[10px] leading-[1.6] text-white/50 md:text-[12px]">
+                    <p className="mt-2 max-w-[220px] text-[10px] leading-[1.6] text-white md:text-[14px]">
                       {stat.label}
                     </p>
                   </div>
@@ -178,7 +178,7 @@ export default function Testimonialsnew() {
         </div>
 
         {/* bottom cta */}
-        <div className="mt-14 flex flex-col items-center justify-center text-center md:py-36">
+        {/* <div className="mt-14 flex flex-col items-center justify-center text-center md:py-36">
           <h3 className="text-[24px] font-normal tracking-[-0.03em] text-white md:text-[46px]">
             Let’s bring your stories to life!
           </h3>
@@ -186,7 +186,7 @@ export default function Testimonialsnew() {
           <button className="mt-5 rounded-full bg-[#41e218] px-6 py-2 text-[12px] font-medium text-[#071720] transition hover:scale-[1.03] md:px-7 md:py-2.5 md:text-[14px]">
             Let&apos;s Talk
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

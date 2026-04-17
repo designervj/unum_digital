@@ -125,12 +125,12 @@ const WorkPage = () => {
                 </p>
                 <div className="flex items-center gap-4">
                   <a href="/lets-talk#demo">
-                    <button className="bg-[#37C100] hover:bg-[#2d9802] text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all hover:-translate-y-0.5">
+                    <button className="bg-[#31AC00] hover:bg-[#2d9802] text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all hover:-translate-y-0.5">
                       Book a Free Demo
                     </button>
                   </a>
                   <a href="/lets-talk#ask">
-                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#37C100] hover:text-white text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm transition-all hover:-translate-y-0.5">
+                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#31AC00] hover:text-white text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm transition-all hover:-translate-y-0.5">
                       Ask Us Anything
                     </button>
                   </a>

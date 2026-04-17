@@ -193,7 +193,7 @@ export function AppSidebar() {
                         className={cn(
                           "rounded-xl px-3 py-5 transition-all text-xs",
                           active
-                            ? "bg-[#37C100] text-white shadow-lg shadow-[#37C100]/25 hover:bg-[#2d9802]"
+                            ? "bg-[#31AC00] text-white shadow-lg shadow-[#31AC00]/25 hover:bg-[#2d9802]"
                             : "text-muted-foreground hover:bg-[#f4fbf1] hover:text-[#1D2931]",
                         )}
                       >
@@ -223,7 +223,7 @@ export function AppSidebar() {
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
           <div className="relative overflow-hidden rounded-2xl border border-[#d7dfdb] bg-gradient-to-br from-[#f4fbf1] via-white to-white p-4 shadow-sm">
             <div className="absolute -right-7 -top-8 opacity-20">
-              <Sparkles size={64} className="text-[#37C100]" />
+              <Sparkles size={64} className="text-[#31AC00]" />
             </div>
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#1f7a39]">{t.sidebar.cms_scope}</p>
             <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
@@ -316,7 +316,7 @@ export function AppSidebar() {
               >
                 <DropdownMenuLabel className="mb-1.5 rounded-xl bg-[#f4fbf1] px-3 py-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#37C100] text-white">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#31AC00] text-white">
                       <User2 size={18} />
                     </div>
                     <div>

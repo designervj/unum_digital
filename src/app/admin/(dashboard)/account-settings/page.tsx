@@ -100,7 +100,7 @@ export default function AccountSettingsPage() {
   };
 
   const inputClass =
-    "w-full rounded-xl border border-[#d7dfdb] bg-white px-4 py-2.5 text-sm text-[#1D2931] placeholder:text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#37C100]/25 focus:border-[#37C100] transition-all";
+    "w-full rounded-xl border border-[#d7dfdb] bg-white px-4 py-2.5 text-sm text-[#1D2931] placeholder:text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#31AC00]/25 focus:border-[#31AC00] transition-all";
 
   const labelClass = "mb-1.5 block text-xs font-bold uppercase tracking-[0.16em] text-[#4b5563]";
 
@@ -108,7 +108,7 @@ export default function AccountSettingsPage() {
     <div className="space-y-6 animate-in fade-in duration-500">
       {toast && (
         <div className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-xl bg-[#1D2931] px-4 py-2.5 text-sm font-semibold text-white shadow-xl">
-          <CheckCircle2 size={16} className="text-[#37C100]" />
+          <CheckCircle2 size={16} className="text-[#31AC00]" />
           {toast}
         </div>
       )}
@@ -122,7 +122,7 @@ export default function AccountSettingsPage() {
               </div>
               <button
                 type="button"
-                className="absolute -bottom-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#37C100] text-white shadow"
+                className="absolute -bottom-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#31AC00] text-white shadow"
                 onClick={() => faviconInputRef.current?.click()}
               >
                 <Camera size={12} />
@@ -131,7 +131,7 @@ export default function AccountSettingsPage() {
 
             <div>
               <p className="text-2xl font-black leading-none text-[#1D2931]">HRESCIC</p>
-              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#37C100]">AGENCY ADMIN PANEL</p>
+              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#31AC00]">AGENCY ADMIN PANEL</p>
             </div>
           </div>
 
@@ -151,7 +151,7 @@ export default function AccountSettingsPage() {
         <div className="space-y-6 lg:col-span-2">
           <section className="overflow-hidden rounded-2xl border border-[#d7dfdb] bg-white shadow-sm">
             <div className="flex items-center gap-3 border-b border-[#dfe7e2] bg-[#f4fbf1] px-6 py-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#37C100]/15 text-[#1f7a39]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#31AC00]/15 text-[#1f7a39]">
                 <User size={16} />
               </div>
               <div>
@@ -213,7 +213,7 @@ export default function AccountSettingsPage() {
                 <button
                   onClick={handleSaveProfile}
                   disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#37C100] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#2d9802] disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#31AC00] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#2d9802] disabled:opacity-60"
                 >
                   <Save size={14} />
                   {saving ? "Saving..." : "Save Changes"}
@@ -271,7 +271,7 @@ export default function AccountSettingsPage() {
               <button
                 onClick={handleSaveAssets}
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#37C100] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#2d9802] disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#31AC00] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#2d9802] disabled:opacity-60"
               >
                 <Save size={14} />
                 {saving ? "Saving..." : "Save Assets"}
@@ -360,7 +360,7 @@ export default function AccountSettingsPage() {
                       onChange={(e) => setNotifications((prev) => ({ ...prev, [key]: e.target.checked }))}
                       className="peer sr-only"
                     />
-                    <div className="h-5 w-9 rounded-full bg-[#d1d5db] transition-colors peer-checked:bg-[#37C100]" />
+                    <div className="h-5 w-9 rounded-full bg-[#d1d5db] transition-colors peer-checked:bg-[#31AC00]" />
                     <div className="absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform peer-checked:translate-x-4" />
                   </div>
                   <div>

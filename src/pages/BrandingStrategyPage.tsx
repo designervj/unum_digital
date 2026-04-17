@@ -90,12 +90,12 @@ const BrandingStrategyPage = () => {
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a href="/lets-talk#demo">
-                    <button className="bg-[#37C100] hover:bg-[#2d9802] text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm font-semibold transition-all">
+                    <button className="bg-[#31AC00] hover:bg-[#2d9802] text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm font-semibold transition-all">
                       Book a Brand Strategy Call
                     </button>
                   </a>
                   <a href="/lets-talk#ask">
-                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#37C100] hover:text-white text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm transition-all">
+                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#31AC00] hover:text-white text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm transition-all">
                       Ask Us Anything
                     </button>
                   </a>
@@ -138,7 +138,7 @@ const BrandingStrategyPage = () => {
       {/* <ComparisonSection /> */}
 
       {/* 6. FINAL CTA */}
-      <CTASec 
+      <CTASec
         headline="Build a brand people understand instantly"
         subtext="Let's create clarity before scaling anything else."
       />

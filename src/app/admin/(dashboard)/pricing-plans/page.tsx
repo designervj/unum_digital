@@ -528,7 +528,7 @@ export default function PricingPlansAdminPage() {
         <button
           onClick={() => void handleSaveAll()}
           disabled={saving || loading}
-          className="inline-flex items-center gap-2 rounded-xl bg-[#37C100] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#2d9802] disabled:opacity-60"
+          className="inline-flex items-center gap-2 rounded-xl bg-[#31AC00] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#2d9802] disabled:opacity-60"
         >
           {saving ? (
             t.pricing_cms.saving

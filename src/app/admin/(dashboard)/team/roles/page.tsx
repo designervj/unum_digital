@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { 
-  Shield, 
-  Check, 
-  Lock, 
-  Info, 
-  Eye, 
-  Edit3, 
-  Settings, 
-  Users, 
+import {
+  Shield,
+  Check,
+  Lock,
+  Info,
+  Eye,
+  Edit3,
+  Settings,
+  Users,
   Save,
   Loader2,
   CheckCircle2
@@ -81,12 +81,12 @@ export default function RolesPermissionsPage() {
   ]);
 
   const handlePermissionChange = (roleId: string, permId: string, newAccess: string) => {
-    setRoles(prevRoles => 
+    setRoles(prevRoles =>
       prevRoles.map(role => {
         if (role.id === roleId) {
           return {
             ...role,
-            permissions: role.permissions.map(p => 
+            permissions: role.permissions.map(p =>
               p.id === permId ? { ...p, access: newAccess } : p
             )
           };
@@ -121,12 +121,12 @@ export default function RolesPermissionsPage() {
           <h1 className="text-2xl font-black uppercase tracking-tight text-[#1D2931]">{t.team.roles_title}</h1>
           <p className="text-sm text-muted-foreground">{t.team.roles_desc}</p>
         </div>
-        
+
         {hasChanges && (
-          <Button 
-            onClick={handleSave} 
+          <Button
+            onClick={handleSave}
             disabled={saving}
-            className="rounded-2xl bg-[#37C100] px-8 py-6 text-[12px] font-black uppercase tracking-widest text-white shadow-xl shadow-[#37C100]/20 hover:bg-[#2d9802] animate-in fade-in slide-in-from-right-4"
+            className="rounded-2xl bg-[#31AC00] px-8 py-6 text-[12px] font-black uppercase tracking-widest text-white shadow-xl shadow-[#31AC00]/20 hover:bg-[#2d9802] animate-in fade-in slide-in-from-right-4"
           >
             {saving ? <Loader2 size={16} className="mr-2 animate-spin" /> : <Save size={16} className="mr-2" />}
             {saving ? t.common.saving : t.common.save}
@@ -155,17 +155,17 @@ export default function RolesPermissionsPage() {
                 {roleInfo.permissions.map((perm) => (
                   <div key={perm.id} className="flex items-center justify-between group">
                     <div className="flex items-center gap-3">
-                      <div className="text-muted-foreground group-hover:text-[#37C100] transition-colors">
+                      <div className="text-muted-foreground group-hover:text-[#31AC00] transition-colors">
                         <perm.icon size={16} />
                       </div>
                       <span className="text-xs font-bold text-[#1D2931]">{perm.module}</span>
                     </div>
-                    
-                    <Select 
-                      value={perm.access} 
+
+                    <Select
+                      value={perm.access}
                       onValueChange={(val) => handlePermissionChange(roleInfo.id, perm.id, val)}
                     >
-                      <SelectTrigger className="h-8 w-28 rounded-lg border-[#d7dfdb] bg-[#f9fafb] px-2 text-[10px] font-black uppercase tracking-widest focus:ring-[#37C100]">
+                      <SelectTrigger className="h-8 w-28 rounded-lg border-[#d7dfdb] bg-[#f9fafb] px-2 text-[10px] font-black uppercase tracking-widest focus:ring-[#31AC00]">
                         <div className="flex items-center gap-2">
                           {getAccessIcon(perm.access)}
                           <SelectValue />
@@ -189,7 +189,7 @@ export default function RolesPermissionsPage() {
       {saveSuccess && (
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 animate-in fade-in slide-in-from-bottom-4">
           <div className="flex items-center gap-3 rounded-2xl bg-[#1D2931] px-6 py-4 text-white shadow-2xl">
-            <CheckCircle2 size={20} className="text-[#37C100]" />
+            <CheckCircle2 size={20} className="text-[#31AC00]" />
             <span className="text-xs font-black uppercase tracking-widest">{t.general_settings.save_success}</span>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function RolesPermissionsPage() {
       <div className="rounded-[32px] border border-dashed border-[#d7dfdb] bg-[#f9fafb]/50 p-10 flex items-center justify-center text-center">
         <div className="max-w-md">
           <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-white shadow-sm border border-[#d7dfdb] mx-auto mb-6">
-            <Info className="text-[#37C100]" size={32} />
+            <Info className="text-[#31AC00]" size={32} />
           </div>
           <h3 className="text-sm font-black uppercase tracking-tight text-[#1D2931]">{t.team.security_enforcement}</h3>
           <p className="text-xs text-muted-foreground mt-3 leading-relaxed">

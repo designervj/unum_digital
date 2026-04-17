@@ -54,13 +54,12 @@ const ReCaptcha: React.FC<ReCaptchaProps> = ({
         <button
           type="button"
           onClick={handleToggle}
-          className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-sm border border-gray-400 bg-white transition-all hover:border-gray-600 ${
-            checked ? "border-[#37C100] bg-[#37C100]/10" : ""
-          }`}
+          className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-sm border border-gray-400 bg-white transition-all hover:border-gray-600 ${checked ? "border-[#31AC00] bg-[#31AC00]/10" : ""
+            }`}
         >
           {checked && (
             <svg
-              className="h-5 w-5 text-[#37C100]"
+              className="h-5 w-5 text-[#31AC00]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -331,6 +330,7 @@ const LetsTalk: React.FC = () => {
 
   return (
     <>
+
       <section className="w-full bg-white pb-8 pt-16 md:pb-2 md:pt-18">
         <div className="mx-auto max-w-6xl px-4">
           <h1 className="mb-4 text-4xl font-semibold leading-tight text-[#0F0F3D] md:text-[50px]">
@@ -345,7 +345,7 @@ const LetsTalk: React.FC = () => {
       <section id="demo" className="w-full bg-white py-10 md:py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 gap-6 overflow-hidden md:grid-cols-2">
-            <div className="flex min-h-[520px] flex-col rounded-[20px] bg-[#37C100] p-8 text-white md:p-10">
+            <div className="flex min-h-[520px] flex-col rounded-[20px] bg-[#31AC00] p-8 text-white md:p-10">
               <h4 className="text-xl font-semibold">{content.demo.panelTitle}</h4>
               <p className="mt-6 text-base leading-relaxed text-white/90 md:text-lg">
                 {content.demo.panelDescription}
@@ -427,7 +427,7 @@ const LetsTalk: React.FC = () => {
                 <button
                   type="submit"
                   disabled={demoSubmitting}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#37C100] px-6 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-[#2d9802] disabled:cursor-not-allowed disabled:opacity-70"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#31AC00] px-6 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-[#2d9802] disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   <img src="/assets/Image/mail2-icon.svg" alt="" />
                   {demoSubmitting ? "Sending..." : content.demo.submitLabel}
@@ -442,9 +442,8 @@ const LetsTalk: React.FC = () => {
 
                 {demoFeedback && (
                   <p
-                    className={`text-[13px] ${
-                      demoFeedback.type === "success" ? "text-[#1f7a39]" : "text-red-600"
-                    }`}
+                    className={`text-[13px] ${demoFeedback.type === "success" ? "text-[#1f7a39]" : "text-red-600"
+                      }`}
                   >
                     {demoFeedback.text}
                   </p>
@@ -454,7 +453,7 @@ const LetsTalk: React.FC = () => {
 
                 <p className="text-[13px] text-[#0F0F3D]">
                   {content.demo.switchPrompt}{" "}
-                  <a href="#ask" className="font-medium text-[#37C100] hover:underline">
+                  <a href="#ask" className="font-medium text-[#31AC00] hover:underline">
                     {content.demo.switchLinkLabel}
                   </a>
                 </p>
@@ -544,9 +543,8 @@ const LetsTalk: React.FC = () => {
 
                 {askFeedback && (
                   <p
-                    className={`text-[13px] ${
-                      askFeedback.type === "success" ? "text-[#1f7a39]" : "text-red-600"
-                    }`}
+                    className={`text-[13px] ${askFeedback.type === "success" ? "text-[#1f7a39]" : "text-red-600"
+                      }`}
                   >
                     {askFeedback.text}
                   </p>
@@ -556,7 +554,7 @@ const LetsTalk: React.FC = () => {
 
                 <p className="text-[13px] text-[#0F0F3D]">
                   {content.ask.switchPrompt}{" "}
-                  <a href="#demo" className="font-medium text-[#37C100] hover:underline">
+                  <a href="#demo" className="font-medium text-[#31AC00] hover:underline">
                     {content.ask.switchLinkLabel}
                   </a>
                 </p>

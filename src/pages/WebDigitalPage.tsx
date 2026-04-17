@@ -90,12 +90,12 @@ const WebDigitalPage = () => {
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a href="/lets-talk#demo">
-                    <button className="bg-[#37C100] hover:bg-[#2d9802] text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm font-semibold transition-all">
+                    <button className="bg-[#31AC00] hover:bg-[#2d9802] text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm font-semibold transition-all">
                       Book a Website Strategy Call
                     </button>
                   </a>
                   <a href="/lets-talk#ask">
-                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#37C100] hover:text-white text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm transition-all">
+                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#31AC00] hover:text-white text-white md:px-8 md:py-3.5 px-6 py-3 rounded-full text-xs md:text-sm transition-all">
                       Ask Us Anything
                     </button>
                   </a>
@@ -103,7 +103,7 @@ const WebDigitalPage = () => {
                 <p className="mt-4 text-[13px] text-white/60 italic">
                   We review your current setup before the call.
                 </p>
-                
+
               </div>
 
 
@@ -138,14 +138,14 @@ const WebDigitalPage = () => {
       {/* 5. PLANS & DELIVERABLES */}
       {/* Grey theme is achieved through neutral card backgrounds in existing PlanSection */}
       <PlanSection />
-      
+
       {/* Add specific grey styles for comparison section in the layout if needed, 
           but we'll start with the default and check for purple. 
           The audit said "Replace all purple tones with grey" which we'll handle in the global CSS or specific overrides. */}
       {/* <ComparisonSection /> */}
 
       {/* 6. FINAL CTA */}
-      <CTASec 
+      <CTASec
         headline="Build a system — not just a website"
         subtext="Let's create something that actually converts."
       />

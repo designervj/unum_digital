@@ -16,8 +16,8 @@ const WebPage = () => {
           {/* 🔹 Left Text Content */}
           <div className="max-w-xl px-2">
             <h1 className="text-white font-normal text-3xl sm:text-4xl lg:text-[50px] mb-6 font-serif">
-              Creative systems that keep your brand alive. 
-            </h1> 
+              Creative systems that keep your brand alive.
+            </h1>
 
             <p className="text-gray-300 text-sm sm:text-base max-w-md mb-6">
               We build brands, websites, content and video that work together — not
@@ -29,13 +29,13 @@ const WebPage = () => {
             <div className="flex  items-center gap-4">
               {/* Primary CTA */}
               <a href="/lets-talk">
-                <button className="bg-[#37C100] hover:bg-[#2d9802] text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all">
+                <button className="bg-[#31AC00] hover:bg-[#2d9802] text-white px-5 py-3 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all">
                   Book a Free Demo
                 </button>
               </a>
 
               {/* Secondary CTA */}
-              <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#37C100] text-white hover:text-[#fff] px-5 py-3 md:px-6 md:py-3  rounded-full text-xs md:text-sm transition-all">
+              <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#31AC00] text-white hover:text-[#fff] px-5 py-3 md:px-6 md:py-3  rounded-full text-xs md:text-sm transition-all">
                 Ask Us Anything
               </button>
             </div>

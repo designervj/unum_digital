@@ -112,9 +112,9 @@ const SectorCards: React.FC = () => {
             >
               {/* Top image content */}
               <div className="h-44 overflow-hidden">
-                <img 
-                  src={c.image} 
-                  alt={c.title} 
+                <img
+                  src={c.image}
+                  alt={c.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -147,7 +147,7 @@ const SectorCards: React.FC = () => {
 
                 <div className="mt-6">
                   <a href={c.link}>
-                    <button className="w-fit rounded-full bg-[#37C100] hover:bg-[#2d9802] px-6 py-2.5 text-[14px] font-medium text-white shadow-sm transition-all hover:-translate-y-0.5">
+                    <button className="w-fit rounded-full bg-[#31AC00] hover:bg-[#2d9802] px-6 py-2.5 text-[14px] font-medium text-white shadow-sm transition-all hover:-translate-y-0.5">
                       {c.cta}
                     </button>
                   </a>

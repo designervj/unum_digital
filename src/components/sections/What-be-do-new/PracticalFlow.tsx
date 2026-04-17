@@ -30,7 +30,7 @@ const PracticalFlow: React.FC<PracticalFlowProps> = ({ headline, subtext, items 
             {items.map((step, index) => (
               <div key={index} className="relative px-0 xl:px-4">
                 <p className="max-w-[240px] text-[14px] leading-7 text-white/90">
-                  <span className="font-bold text-[#37C100]">{step.highlight} </span>
+                  <span className="font-bold text-[#31AC00]">{step.highlight} </span>
                   {step.text}
                 </p>
 
@@ -43,7 +43,7 @@ const PracticalFlow: React.FC<PracticalFlowProps> = ({ headline, subtext, items 
 
           <div className="mt-16">
             <a href="/lets-talk#demo">
-              <button className="rounded-full bg-[#37C100] hover:bg-[#2d9802] px-10 py-4 text-sm font-semibold text-white transition-all transform hover:-translate-y-1">
+              <button className="rounded-full bg-[#31AC00] hover:bg-[#2d9802] px-10 py-4 text-sm font-semibold text-white transition-all transform hover:-translate-y-1">
                 Book a Strategy Call
               </button>
             </a>

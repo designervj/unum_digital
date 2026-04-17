@@ -156,7 +156,7 @@ const PlanSection = () => {
       <div className="mt-12 text-center">
         <a
           href={sectionSettings.bottomCtaHref}
-          className="rounded-full bg-[#37C100] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#2d9802]"
+          className="rounded-full bg-[#31AC00] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#2d9802]"
         >
           {sectionSettings.bottomCtaLabel}
         </a>

@@ -21,6 +21,8 @@ const Header = () => {
   const navItems = [
     { name: "Our Services", href: "/our-services" },
     { name: "Our Work", href: "/our-work" },
+    { name: "About Us", href: "/about-us" },
+
   ];
 
   if (!mounted) {
@@ -49,7 +51,8 @@ const Header = () => {
             href="/"
             className="shrink-0 text-[20px] font-semibold tracking-[-0.03em] text-white transition-opacity duration-200 hover:opacity-90 sm:text-[22px] md:text-[24px] lg:text-[25px]"
           >
-            UNUM.DIGITAL
+
+            <img src="../assets/img/unumdigital-logo.svg" alt="logo" />
           </Link>
 
           {/* Desktop Nav */}
@@ -66,7 +69,7 @@ const Header = () => {
 
             <Link
               href="/lets-talk"
-              className="inline-flex h-[38px] items-center justify-center rounded-full bg-[#49c313] px-5 text-[12px] font-semibold text-white transition-all duration-200 hover:bg-[#3eab10] xl:h-[40px] xl:px-6 xl:text-[13px]"
+              className="inline-flex h-[38px] items-center justify-center rounded-full bg-[#31AC00] px-5 text-[12px] font-medium text-white transition-all duration-200 hover:bg-[#3eab10] xl:h-[40px] xl:px-6 xl:text-[13px]"
             >
               Let&apos;s Talk
             </Link>

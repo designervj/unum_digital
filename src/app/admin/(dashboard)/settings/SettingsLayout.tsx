@@ -52,7 +52,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
             {t.groups.settings}
           </h2>
         </div>
-        
+
         <nav className="space-y-3">
           {tabs.map((tab) => {
             const active = pathname === tab.href;
@@ -63,7 +63,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
                 className={cn(
                   "group flex items-center gap-4 rounded-[22px] px-3 py-2 transition-all duration-300",
                   active
-                    ? "bg-[#37C100] text-white shadow-xl shadow-[#37C100]/25 translate-x-2"
+                    ? "bg-[#31AC00] text-white shadow-xl shadow-[#31AC00]/25 translate-x-2"
                     : "bg-white border border-[#d7dfdb] text-[#1D2931] hover:bg-[#f4fbf1] hover:border-[#b9d9a7] hover:translate-x-1"
                 )}
               >
@@ -73,7 +73,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
                 )}>
                   <tab.icon size={22} strokeWidth={2.2} />
                 </div>
-                
+
                 <div className="flex flex-col min-w-0 flex-1">
                   <span className="text-[13px] font-black uppercase tracking-tight truncate">
                     {tab.label}

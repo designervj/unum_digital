@@ -106,14 +106,14 @@ const ComparisonSection: React.FC = () => {
   return (
     <section className="container-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-6">
       {/* Section label (red) */}
-    
+
 
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-light tracking-tight text-gray-800">
-         Compare All Plans
+          Compare All Plans
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-         See exactly what each plan includes — side by side.
+          See exactly what each plan includes — side by side.
         </p>
       </div>
 
@@ -123,11 +123,11 @@ const ComparisonSection: React.FC = () => {
         {/* Top border line like reference */}
         {/* <div className="h-[2px] w-full bg-[#3E1FFF]" /> */}
 
-        
-     
 
 
-        
+
+
+
 
         {/* Inner light panel with table */}
         <div className="px-5 sm:px-8 lg:px-0 py-0 ">
@@ -135,7 +135,7 @@ const ComparisonSection: React.FC = () => {
             <div className="overflow-x-auto">
               <div className="min-w-[720px]">
                 {/* Header row */}
-                <div className="grid grid-cols-[1.6fr_1fr_1fr_1fr_1fr] text-xs md:text-sm font-semibold text-[#37c100] bg-gray-50/50">
+                <div className="grid grid-cols-[1.6fr_1fr_1fr_1fr_1fr] text-xs md:text-sm font-semibold text-[#31AC00] bg-gray-50/50">
                   <div className="px-4 py-3 border-b border-gray-200 text-left">
                     Feature / Element
                   </div>

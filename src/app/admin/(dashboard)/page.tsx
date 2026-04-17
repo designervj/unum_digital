@@ -39,7 +39,7 @@ export default function AdminDashboard() {
   const [error, setError] = useState("");
   const [summary, setSummary] = useState<DashboardSummary | null>(null);
   const [adminName, setAdminName] = useState("Admin");
-  
+
   const currentLocale = useSelector(selectAdminLocale) as LocaleCode;
   const t = ADMIN_TRANSLATIONS[currentLocale] || ADMIN_TRANSLATIONS.en;
 
@@ -53,14 +53,14 @@ export default function AdminDashboard() {
           fetch("/api/admin/dashboard/summary"),
           fetch("/api/admin/me")
         ]);
-        
+
         const summData = await summRes.json();
         const meData = await meRes.json();
 
         if (summData.success) {
           setSummary(summData.summary as DashboardSummary);
         }
-        
+
         if (meData.success && meData.admin.name) {
           setAdminName(meData.admin.name);
         }
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
         label: t.dashboard.new_leads,
         value: summary?.leads.new ?? 0,
         icon: BadgeCheck,
-        accent: "bg-[#37C100] text-white shadow-lg shadow-[#37C100]/20",
+        accent: "bg-[#31AC00] text-white shadow-lg shadow-[#31AC00]/20",
         description: t.dashboard.new_leads_desc
       },
       {
@@ -150,35 +150,35 @@ export default function AdminDashboard() {
         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
           <Sparkles size={180} />
         </div>
-        
+
         <div className="relative z-10 space-y-4 max-w-2xl">
-          <div className="flex items-center gap-3 text-[#37C100] font-black uppercase tracking-[0.2em] text-[10px]">
+          <div className="flex items-center gap-3 text-[#31AC00] font-black uppercase tracking-[0.2em] text-[10px]">
             <Calendar size={14} />
             {formattedDate}
           </div>
-          
+
           <h1 className="text-3xl md:text-5xl font-black tracking-tight text-white uppercase italic leading-none">
-            {t.dashboard.welcome} <br/>
-            <span className="text-[#37C100] not-italic">{adminName}</span>
+            {t.dashboard.welcome} <br />
+            <span className="text-[#31AC00] not-italic">{adminName}</span>
           </h1>
-          
+
           <p className="text-gray-400 text-sm md:text-base max-w-sm leading-relaxed">
             {t.dashboard.hero_desc}
           </p>
         </div>
 
         <div className="absolute bottom-10 right-10 hidden lg:block">
-           <Link href="/" target="_blank">
-             <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20 border border-white/10 backdrop-blur-md px-6 py-6 text-xs font-black uppercase tracking-wider gap-2">
-               <Globe size={14} /> {t.dashboard.visit_live}
-             </Button>
-           </Link>
+          <Link href="/" target="_blank">
+            <Button className="rounded-2xl bg-white/10 text-white hover:bg-white/20 border border-white/10 backdrop-blur-md px-6 py-6 text-xs font-black uppercase tracking-wider gap-2">
+              <Globe size={14} /> {t.dashboard.visit_live}
+            </Button>
+          </Link>
         </div>
       </section>
 
       {error && (
         <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 font-bold flex items-center gap-2">
-           <Shield size={16} /> {error}
+          <Shield size={16} /> {error}
         </div>
       )}
 
@@ -194,7 +194,7 @@ export default function AdminDashboard() {
                 <Clock size={12} /> {t.dashboard.sync_live}
               </div>
             </div>
-            
+
             <div className="space-y-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.16em] text-muted-foreground">{card.label}</h3>
               <p className="text-4xl font-black tracking-tight text-[#1D2931]">
@@ -216,26 +216,26 @@ export default function AdminDashboard() {
               <h2 className="text-xl font-black uppercase tracking-tight text-[#1D2931]">{t.dashboard.capabilities}</h2>
               <p className="text-xs text-muted-foreground mt-1 tracking-wider uppercase font-bold">{t.dashboard.capabilities_sub}</p>
             </div>
-            <MousePointer2 className="text-[#37C100] opacity-30" size={32} />
+            <MousePointer2 className="text-[#31AC00] opacity-30" size={32} />
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-             {capabilities.map((cap) => (
-               <div key={cap.title} className="p-5 rounded-[1.5rem] border border-[#d7dfdb] bg-[#f9fafb]/50 group transition hover:bg-white hover:border-[#37C100]/30 hover:shadow-md">
-                 <div className={`p-3 w-fit rounded-xl mb-4 ${cap.color}`}>
-                   <cap.icon size={20} />
-                 </div>
-                 <h3 className="text-sm font-black uppercase tracking-tight text-[#1D2931]">{cap.title}</h3>
-                 <p className="mt-2 text-xs leading-5 text-muted-foreground">{cap.description}</p>
-               </div>
-             ))}
+            {capabilities.map((cap) => (
+              <div key={cap.title} className="p-5 rounded-[1.5rem] border border-[#d7dfdb] bg-[#f9fafb]/50 group transition hover:bg-white hover:border-[#31AC00]/30 hover:shadow-md">
+                <div className={`p-3 w-fit rounded-xl mb-4 ${cap.color}`}>
+                  <cap.icon size={20} />
+                </div>
+                <h3 className="text-sm font-black uppercase tracking-tight text-[#1D2931]">{cap.title}</h3>
+                <p className="mt-2 text-xs leading-5 text-muted-foreground">{cap.description}</p>
+              </div>
+            ))}
           </div>
-          
-          <div className="mt-8 p-4 rounded-2xl bg-[#eaf8df]/50 border border-[#37C100]/10 flex items-center justify-between group cursor-help">
-             <p className="text-[10px] font-bold text-[#1f7a39] uppercase tracking-widest">
-               {t.dashboard.note}
-             </p>
-             <ArrowRight size={14} className="text-[#37C100] opacity-0 group-hover:opacity-100 transition-opacity" />
+
+          <div className="mt-8 p-4 rounded-2xl bg-[#eaf8df]/50 border border-[#31AC00]/10 flex items-center justify-between group cursor-help">
+            <p className="text-[10px] font-bold text-[#1f7a39] uppercase tracking-widest">
+              {t.dashboard.note}
+            </p>
+            <ArrowRight size={14} className="text-[#31AC00] opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
         </article>
 
@@ -260,7 +260,7 @@ export default function AdminDashboard() {
               >
                 {link.label}
                 <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gray-50 group-hover:bg-current group-hover:bg-opacity-10">
-                   <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="h-4 w-4" />
                 </div>
               </Link>
             ))}

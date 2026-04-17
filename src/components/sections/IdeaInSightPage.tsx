@@ -75,7 +75,7 @@ const IdeaInSightPage = () => {
           <div className="text-center mt-16">
             <button
               // --- Changed to rounded-full ---
-              className="bg-[#37c100] text-white font-medium py-3 px-8 rounded-full hover:bg-opacity-90 transition-all duration-300"
+              className="bg-[#31AC00] text-white font-medium py-3 px-8 rounded-full hover:bg-opacity-90 transition-all duration-300"
             >
               See all insights
             </button>

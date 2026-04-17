@@ -57,9 +57,9 @@ export default function WhoWeCreateFor() {
   ];
 
   return (
-    <section className="bg-white py-16 px-4 md:px-10 md:py-18">
-      <div className="container-xl mx-auto">
-        <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
+    <section className="bg-white py-16 px-4 md:px-0 md:py-18">
+      <div className="max-w-7xl mx-auto px-0">
+        <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
           <h2 className="mb-4 text-3xl font-semibold text-[#161E23] md:text-[40px]">
     Who We Create For (Mostly)?
 
@@ -94,7 +94,7 @@ export default function WhoWeCreateFor() {
                   <hr className="mb-4 border-gray-200" />
                   <a
                     href={item.href}
-                    className="group flex items-center gap-1 text-[15px] font-medium text-[#3aaa35] transition-all hover:underline"
+                    className="group flex items-center gap-1 text-[15px] font-medium text-[#31AC00] transition-all hover:underline"
                   >
                     {item.linkText}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

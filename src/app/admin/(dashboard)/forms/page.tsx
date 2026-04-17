@@ -258,7 +258,7 @@ export default function FormsCmsPage() {
             </p>
           </div>
           <div className="space-y-2 text-right text-xs">
-            <div className="bg-[#37C100] hover:bg-[#2d9802] text-white px-6 py-3 rounded-full text-sm font-medium transition-all">
+            <div className="bg-[#31AC00] hover:bg-[#2d9802] text-white px-6 py-3 rounded-full text-sm font-medium transition-all">
               Role: <span className="font-semibold text-foreground uppercase tracking-wider">{adminRawRole}</span>
             </div>
           </div>
@@ -276,9 +276,8 @@ export default function FormsCmsPage() {
               <button
                 key={m.key}
                 onClick={() => setActiveModule(m.key)}
-                className={`w-full flex items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${
-                  activeModule === m.key ? "bg-[#f4fbf1] border border-[#b9d9a7] text-[#1f7a39]" : "hover:bg-muted border border-transparent"
-                }`}
+                className={`w-full flex items-center gap-3 rounded-xl px-3 py-2.5 text-left transition ${activeModule === m.key ? "bg-[#f4fbf1] border border-[#b9d9a7] text-[#1f7a39]" : "hover:bg-muted border border-transparent"
+                  }`}
               >
                 <m.icon className="h-4 w-4" />
                 <span className="text-sm font-bold">{m.label}</span>
@@ -313,7 +312,7 @@ export default function FormsCmsPage() {
                   <input
                     value={heroContent.heroTitle}
                     onChange={(e) => setHeroContent(p => ({ ...p, heroTitle: e.target.value }))}
-                    className="w-full rounded-xl border border-[#e5e7eb] p-3 focus:outline-none focus:ring-1 focus:ring-[#37C100]/30 transition"
+                    className="w-full rounded-xl border border-[#e5e7eb] p-3 focus:outline-none focus:ring-1 focus:ring-[#31AC00]/30 transition"
                   />
                 </label>
                 <label className="space-y-1.5 text-sm">
@@ -322,7 +321,7 @@ export default function FormsCmsPage() {
                     value={heroContent.heroDescription}
                     onChange={(e) => setHeroContent(p => ({ ...p, heroDescription: e.target.value }))}
                     rows={3}
-                    className="w-full rounded-xl border border-[#e5e7eb] p-3 focus:outline-none focus:ring-1 focus:ring-[#37C100]/30 transition"
+                    className="w-full rounded-xl border border-[#e5e7eb] p-3 focus:outline-none focus:ring-1 focus:ring-[#31AC00]/30 transition"
                   />
                 </label>
                 <div className="grid gap-5 md:grid-cols-2">
@@ -468,7 +467,7 @@ export default function FormsCmsPage() {
                 </label>
 
                 <div className="grid gap-5 md:grid-cols-2 bg-gradient-to-br from-white to-[#f4fbf1] p-5 rounded-2xl border border-[#d7dfdb]">
-                   <label className="space-y-1.5 text-sm">
+                  <label className="space-y-1.5 text-sm">
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#1f7a39]">Success Message</span>
                     <input
                       value={activeModule === "demo" ? demoContent.successMessage : askContent.successMessage}
@@ -508,7 +507,7 @@ export default function FormsCmsPage() {
               <button
                 onClick={() => void handleSave()}
                 disabled={loading || saving || !canWriteFormsCms}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#37C100] px-6 py-2.5 text-sm font-bold text-white hover:bg-[#2d9802] shadow-lg shadow-[#37C100]/20 transition disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#31AC00] px-6 py-2.5 text-sm font-bold text-white hover:bg-[#2d9802] shadow-lg shadow-[#31AC00]/20 transition disabled:opacity-50"
               >
                 {saving ? "Saving..." : (
                   <>

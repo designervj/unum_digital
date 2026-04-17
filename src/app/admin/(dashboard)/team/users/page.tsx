@@ -5,26 +5,26 @@ import { useSelector } from "react-redux";
 import { selectAdminLocale } from "@/lib/store/features/adminLocaleSlice";
 import { LocaleCode } from "@/types/localization";
 import { ADMIN_TRANSLATIONS } from "@/lib/translations";
-import { 
-  Users, 
-  UserPlus, 
-  Search, 
-  MoreVertical, 
-  Shield, 
-  Mail, 
-  CheckCircle2, 
+import {
+  Users,
+  UserPlus,
+  Search,
+  MoreVertical,
+  Shield,
+  Mail,
+  CheckCircle2,
   XCircle,
   Loader2,
   RefreshCw,
   Plus
 } from "lucide-react";
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -135,8 +135,8 @@ export default function UsersPage() {
     }
   };
 
-  const filteredUsers = users.filter(user => 
-    (user.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) || 
+  const filteredUsers = users.filter(user =>
+    (user.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
     (user.email?.toLowerCase() || "").includes(searchTerm.toLowerCase())
   );
 
@@ -159,12 +159,12 @@ export default function UsersPage() {
           <h1 className="text-2xl font-black uppercase tracking-tight text-[#1D2931]">{t.team.title}</h1>
           <p className="text-sm text-muted-foreground">{t.team.desc}</p>
         </div>
-        
+
         <div className="flex items-center gap-2">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={fetchUsers} 
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={fetchUsers}
             disabled={loading}
             className="rounded-xl border-[#d7dfdb] text-[11px] font-black uppercase tracking-widest text-[#1D2931]"
           >
@@ -174,7 +174,7 @@ export default function UsersPage() {
 
           <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
             <DialogTrigger asChild>
-              <Button className="rounded-xl bg-[#37C100] hover:bg-[#2d9802] text-[11px] font-black uppercase tracking-widest text-white shadow-xl shadow-[#37C100]/20">
+              <Button className="rounded-xl bg-[#31AC00] hover:bg-[#2d9802] text-[11px] font-black uppercase tracking-widest text-white shadow-xl shadow-[#31AC00]/20">
                 <UserPlus size={14} className="mr-2" />
                 {t.team.add_member}
               </Button>
@@ -190,30 +190,30 @@ export default function UsersPage() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-[#1D2931]/60">{t.team.full_name}</label>
-                    <Input 
-                      placeholder="Jane Doe" 
+                    <Input
+                      placeholder="Jane Doe"
                       value={newUser.name}
-                      onChange={(e) => setNewUser({...newUser, name: e.target.value})}
+                      onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
                       required
-                      className="rounded-2xl border-[#d7dfdb] bg-[#f9fafb] px-4 py-6 text-sm focus:ring-[#37C100]"
+                      className="rounded-2xl border-[#d7dfdb] bg-[#f9fafb] px-4 py-6 text-sm focus:ring-[#31AC00]"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-[#1D2931]/60">{t.team.email_address}</label>
-                    <Input 
-                      type="email" 
-                      placeholder="jane@company.com" 
+                    <Input
+                      type="email"
+                      placeholder="jane@company.com"
                       value={newUser.email}
-                      onChange={(e) => setNewUser({...newUser, email: e.target.value})}
+                      onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
                       required
-                      className="rounded-2xl border-[#d7dfdb] bg-[#f9fafb] px-4 py-6 text-sm focus:ring-[#37C100]"
+                      className="rounded-2xl border-[#d7dfdb] bg-[#f9fafb] px-4 py-6 text-sm focus:ring-[#31AC00]"
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-[#1D2931]/60">{t.team.assigned_role}</label>
-                    <Select 
+                    <Select
                       value={newUser.role}
-                      onValueChange={(val) => setNewUser({...newUser, role: val})}
+                      onValueChange={(val) => setNewUser({ ...newUser, role: val })}
                     >
                       <SelectTrigger className="rounded-2xl border-[#d7dfdb] bg-[#f9fafb] px-4 py-6 text-sm">
                         <SelectValue placeholder={t.team.select_role} />
@@ -227,8 +227,8 @@ export default function UsersPage() {
                   </div>
                 </div>
                 <DialogFooter className="mt-8">
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     disabled={submitting}
                     className="w-full rounded-2xl bg-[#1D2931] py-6 text-[12px] font-black uppercase tracking-widest text-white shadow-xl shadow-[#1D2931]/20 hover:bg-[#000]"
                   >
@@ -245,9 +245,9 @@ export default function UsersPage() {
         <div className="p-4 border-b border-[#d7dfdb] bg-[#f9fafb]/50">
           <div className="relative max-w-sm">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
-            <Input 
-              placeholder={t.team.search_placeholder} 
-              className="pl-10 rounded-xl border-[#d7dfdb] bg-white h-10 text-sm focus:ring-[#37C100]"
+            <Input
+              placeholder={t.team.search_placeholder}
+              className="pl-10 rounded-xl border-[#d7dfdb] bg-white h-10 text-sm focus:ring-[#31AC00]"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -323,7 +323,7 @@ export default function UsersPage() {
                     <TableCell className="px-6 py-5 text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg hover:bg-[#f4fbf1] hover:text-[#37C100]">
+                          <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg hover:bg-[#f4fbf1] hover:text-[#31AC00]">
                             <MoreVertical size={16} />
                           </Button>
                         </DropdownMenuTrigger>

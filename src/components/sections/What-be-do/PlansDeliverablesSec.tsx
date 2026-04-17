@@ -136,7 +136,7 @@ const PlansDeliverablesSec: React.FC = () => {
           >
             {/* Top title area (like For admins/learners) */}
             <div className="mb-6">
-              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#37c100]">
+              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#31AC00]">
                 {plan.label}
               </p>
               <h3 className="mt-2 text-xl md:text-2xl font-semibold text-gray-900">

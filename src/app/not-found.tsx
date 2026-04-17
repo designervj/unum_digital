@@ -8,11 +8,11 @@ export default function NotFound() {
     <main className="flex min-h-[70vh] flex-col items-center justify-center bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="text-center">
         <div className="flex justify-center mb-6">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f4fbf1] text-[#37C100]">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f4fbf1] text-[#31AC00]">
             <TriangleAlert size={32} />
           </div>
         </div>
-        <p className="text-sm font-black uppercase tracking-[0.2em] text-[#37C100]">Error 404</p>
+        <p className="text-sm font-black uppercase tracking-[0.2em] text-[#31AC00]">Error 404</p>
         <h1 className="mt-4 text-4xl font-black tracking-tight text-[#1D2931] sm:text-5xl uppercase">
           Page Not Found
         </h1>

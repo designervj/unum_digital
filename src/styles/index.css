@@ -69,24 +69,24 @@ span {
   width: 10px !important;
 }
 
-.bg-primary{
-  background-color: #37C100 !important;
+.bg-primary {
+  background-color: #31AC00 !important;
 }
 
-.bg-primary-hover:hover{
+.bg-primary-hover:hover {
   background-color: #2d9802 !important;
 }
 
-.text-primary{
-  color: #37C100 !important;
+.text-primary {
+  color: #31AC00 !important;
 }
 
-.text-primary-hover:hover{
+.text-primary-hover:hover {
   color: #2d9802 !important;
 }
 
-.btn-primary{
-  background-color: #37C100;
+.btn-primary {
+  background-color: #31AC00;
   color: white;
   padding: 12px 24px;
   border-radius: 9999px;
@@ -95,42 +95,41 @@ span {
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #2d9802;
 }
 
-.text-gray{
+.text-gray {
   color: #555555 !important;
 }
 
-.bg-light-green{
+.bg-light-green {
   background-color: #8DA117 !important;
 }
 
-.bg-orange{
+.bg-orange {
   background-color: #DD9842 !important;
 }
 
-.bg-orange:hover{
+.bg-orange:hover {
   background-color: #c28d3d !important;
 }
 
-.bg-light-green:hover{
+.bg-light-green:hover {
   background-color: #98b012 !important;
 }
 
 /* karlo ban page */
 @media (max-width: 767px) {
 
- 
 
-.container-xl{
-  padding:0px !important;
-}
+
+  .container-xl {
+    padding: 0px !important;
+  }
 }
 
-.hero-title span{
+.hero-title span {
   font-family: "Optima", sans-serif !important;
   font-size: 40px;
 }
-

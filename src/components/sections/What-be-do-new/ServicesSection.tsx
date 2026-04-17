@@ -50,7 +50,7 @@ const steps = [
 const CheckItem = ({ text }: { text: string }) => {
   return (
     <li className="flex items-start gap-3 text-[13px] leading-6 text-[#5f5a68]">
-      <span className="mt-1 flex h-[15px] w-[15px] shrink-0 items-center justify-center rounded-full bg-[#37C100] text-[10px] font-bold text-white">
+      <span className="mt-1 flex h-[15px] w-[15px] shrink-0 items-center justify-center rounded-full bg-[#31AC00] text-[10px] font-bold text-white">
         ✓
       </span>
       <span>{text}</span>
@@ -83,8 +83,8 @@ const ServicesSection = () => {
           <div className="my-4 h-px bg-[#00000012]" />
           <ul className="space-y-6 text-[15px] text-[#56545c]">
             {services.map((item, index) => (
-              <li 
-                key={item} 
+              <li
+                key={item}
                 id={index === 0 ? "branding" : index === 1 ? "web" : index === 2 ? "content" : "video"}
                 className="scroll-mt-24"
               >
@@ -132,38 +132,38 @@ const ServicesSection = () => {
       </div>
 
       <div className="relative mt-4 overflow-hidden rounded-[16px]  bg-[#1D2931]">
-       
+
 
         <div className="mx-auto max-w-5xl px-6 py-12 text-center text-white sm:px-8 sm:py-16 lg:px-12 lg:py-16">
           <h3 className="text-3xl font-light leading-tight md:text-4xl">
-            How Our Subscription Model Works 
-          </h3> 
+            How Our Subscription Model Works
+          </h3>
 
           <p className="mx-auto mt-5  text-sm font-normal leading-7 text-white/95 sm:text-base">
-           Every plan includes a one-time setup that fixes your <br className="hidden md:block"/> 
-           foundation and a monthly rhythm that keeps your <br className="hidden md:block"/>
-           brand consistent and performing.
+            Every plan includes a one-time setup that fixes your <br className="hidden md:block" />
+            foundation and a monthly rhythm that keeps your <br className="hidden md:block" />
+            brand consistent and performing.
           </p>
 
           <div className="md:mt-40 mt-10 grid gap-8 text-left md:grid-cols-2 xl:grid-cols-4">
-           {steps.map((step, index) => (
-  <div key={step.highlight} className="relative px-0 xl:px-4">
-    <p className="max-w-[210px] text-[13px] leading-6 text-[#F1E7FF]">
-      <span className="font-semibold text-[#37C100]">{step.highlight}</span>
-      {step.text}
-    </p>
+            {steps.map((step, index) => (
+              <div key={step.highlight} className="relative px-0 xl:px-4">
+                <p className="max-w-[210px] text-[13px] leading-6 text-[#F1E7FF]">
+                  <span className="font-semibold text-[#31AC00]">{step.highlight}</span>
+                  {step.text}
+                </p>
 
-    {index !== steps.length - 1 && (
-      <span className="absolute right-0 top-1 hidden h-10 w-[2px] bg-[#37C100]/50 xl:block" />
-    )}
-  </div>
-))}
+                {index !== steps.length - 1 && (
+                  <span className="absolute right-0 top-1 hidden h-10 w-[2px] bg-[#31AC00]/50 xl:block" />
+                )}
+              </div>
+            ))}
           </div>
-          
+
           <a href="#plans">
-          <button className="mt-10 rounded-full bg-[#37C100] hover:bg-[#2d9802] px-8 py-3 text-sm font-medium text-white  transition hover:-translate-y-0.5">
-            See Our Plans
-          </button>
+            <button className="mt-10 rounded-full bg-[#31AC00] hover:bg-[#2d9802] px-8 py-3 text-sm font-medium text-white  transition hover:-translate-y-0.5">
+              See Our Plans
+            </button>
           </a>
         </div>
       </div>

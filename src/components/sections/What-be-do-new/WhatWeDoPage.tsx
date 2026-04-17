@@ -31,12 +31,12 @@ const WhatWeDoPage = () => {
                 </p>
                 <div className="flex items-center gap-4">
                   <a href="/lets-talk#demo">
-                    <button className="bg-[#37C100] hover:bg-[#2d9802] text-white md:px-6 md:py-3 px-4 py-3 text-xs rounded-full md:text-sm font-medium">
+                    <button className="bg-[#31AC00] hover:bg-[#2d9802] text-white md:px-6 md:py-3 px-4 py-3 text-xs rounded-full md:text-sm font-medium">
                       Book a Free Demo
                     </button>
                   </a>
                   <a href="/lets-talk#ask">
-                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#37C100] hover:text-white text-white md:px-6 md:py-3 px-5 py-3 text-xs rounded-full md:text-sm">
+                    <button className="flex items-center gap-2 bg-[#FFFFFF1A] hover:bg-[#31AC00] hover:text-white text-white md:px-6 md:py-3 px-5 py-3 text-xs rounded-full md:text-sm">
                       Ask Us Anything
                     </button>
                   </a>
