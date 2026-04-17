@@ -41,7 +41,7 @@ export default function AboutSection() {
                         {/* OVERLAY */}
                         <div className="absolute inset-0 bg-black/40" />
 
-                        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16">
+                        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-24">
                             <h2 className="text-[40px] font-medium tracking-[-0.04em] text-white md:text-[60px]">
                                 About Us
                             </h2>

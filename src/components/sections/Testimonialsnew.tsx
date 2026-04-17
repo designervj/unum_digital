@@ -46,9 +46,9 @@ His design aesthetic is clean, crisp and colorful as can be seen from our most r
     name: "Marva Sadler",
     role: "Managing Director, MLS Odyssey LLC, acting COO, Coaches Rising",
     image: "../assets/Image/testimonils.png", // replace with your image
-    quote: `"Nik worked as the Design Director while I was CEO of WBECS, and later COO of Coaching.com. During that time, he produced not only amazing graphics and designs, but also impeccable sales page and landing page design structures that capitalized on essential data about copy length, placement and nature of calls to action, and all sorts of other high ROI changes that led to greater success.
+    quote: `"Nik worked as the Design Director while I was CEO of WBECS, and later  COO of Coaching.com. During that time, he produced not only amazing  graphics and designs, but also impeccable sales page and landing page  design structures that capitalized on essential data about copy length,  placement and nature of calls to action, and all sorts of other high ROI changes that led to greater success.  More importantly, he worked  quickly, regularly introduced valuable innovations, required very few  iterations, and never missed a deadline or caused drama.  He was a dream to work with."
 
-More importantly, he worked quickly, regularly introduced valuable innovations, required very few iterations, and never missed a deadline or caused drama. He was a dream to work with."`,
+`,
     stats: [
       {
         value: "88%",
@@ -126,7 +126,7 @@ export default function Testimonialsnew() {
 
             {/* content */}
             <div className="max-w-[860px]">
-              <p className="whitespace-pre-line text-[14px] leading-[140%] text-white/90 md:text-[26px] md:leading-[140%]">
+              <p className="whitespace-pre-line text-[14px] leading-[140%] text-white/90 md:text-[20px] md:leading-[140%]">
                 {current.quote}
               </p>
 
@@ -140,7 +140,7 @@ export default function Testimonialsnew() {
               </div>
 
               {/* stats */}
-              <div className="mt-8 grid grid-cols-1 gap-6 pt-2 md:mt-12 md:grid-cols-3 md:gap-0">
+              <div className="mt-8 grid grid-cols-1 gap-6 pt-2 md:mt-12 md:grid-cols-3 md:gap-0 w-full md:w-[1000px]">
                 {current.stats.map((stat, index) => (
                   <div
                     key={index}
@@ -149,7 +149,7 @@ export default function Testimonialsnew() {
                     <h4 className="text-[30px] font-semibold tracking-[-0.04em] text-[#7997A8] md:text-[50px]">
                       {stat.value}
                     </h4>
-                    <p className="mt-2 max-w-[220px] text-[10px] leading-[1.6] text-white md:text-[14px]">
+                    <p className="mt-2 max-w-[400px] text-[10px] leading-[1.6] text-white md:text-[14px]">
                       {stat.label}
                     </p>
                   </div>

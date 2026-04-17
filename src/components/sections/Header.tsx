@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#161E23]">
-      <div className="relative w-full  shadow-[0_1px_0_rgba(255,255,255,0.04)]">
+      <div className="relative w-full">
         <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
           {/* Logo */}
           <Link

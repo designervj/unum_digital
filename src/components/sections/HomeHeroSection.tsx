@@ -99,12 +99,12 @@ export default function CreativeAgencySection() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
   return (
-    <section className="w-full bg-[#161E23] px-4 py-6 md:px-6 md:py-8">
+    <section className="w-full bg-[#161E23] px-4 py-6 md:px-6 md:py-0">
       <div className="mx-auto max-w-7xl ">
-        <div className="rounded-[10px] ] p-4 md:py-5 px-0">
+        <div className="rounded-[10px] ] p-4 md:pb-10 px-0">
           {/* HERO */}
           <div className="relative overflow-hidden rounded-[8px]">
-            <div className="relative h-[260px] w-full sm:h-[360px] lg:h-[740px]">
+            <div className="relative h-[260px] w-full sm:h-[360px] lg:h-[630px]">
               <img
                 src="../assets/img/unumdigital-img (6).png"
                 alt="Creative direction for brands"
@@ -117,7 +117,7 @@ export default function CreativeAgencySection() {
 
               <div className="absolute left-5 top-1/2 z-10 max-w-[360px] -translate-y-1/2 md:left-8 md:max-w-[600px]">
                 <h1 className="text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-[30px] md:text-[38px] lg:text-[42px]">
-                  Creative Direction for Brands That Need Strategy, Systems, and Scale
+                 Creative direction for brands that need strategy, systems, and scale.
                 </h1>
 
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -136,7 +136,7 @@ export default function CreativeAgencySection() {
           </div>
 
           {/* STATS + CONTENT */}
-          <div className="mt-8 grid gap-8 md:mt-10 md:grid-cols-[1fr_1.05fr] md:gap-10">
+          <div className="pt-20 grid gap-8 md:mt-10 md:grid-cols-[1fr_1.05fr] md:gap-10">
             <div className="grid grid-cols-2 gap-x-6 gap-y-7 md:gap-x-8 md:gap-y-8">
               {stats.map((item) => (
                 <div key={item.value}>
@@ -201,7 +201,7 @@ export default function CreativeAgencySection() {
                     <div className="overflow-hidden rounded-[14px] bg-[#0d1d28] w-full">
                       <div className="grid md:grid-cols-[0.95fr_1.05fr] h-full">
                         {/* LEFT */}
-                        <div className="bg-[#1B242A] px-6 py-8 md:px-10 md:py-14 flex flex-col h-full">
+                        <div className="bg-[#242E34] px-6 py-8 md:px-10 md:py-14 flex flex-col h-full">
                           <h4 className="text-[28px] font-semibold tracking-[-0.03em] text-white md:text-[30px]">
                             {service.title}
                           </h4>

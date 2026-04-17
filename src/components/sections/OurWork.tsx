@@ -86,7 +86,7 @@ export default function WhoWeCreateFor() {
                   {item.title}
                 </h4>
 
-                <p className="mb-6 text-[14px] leading-relaxed text-[#666666] md:text-[15px]">
+                <p className="mb-6 text-[14px] leading-relaxed text-[#555555] md:text-[15px]">
                   {item.description}
                 </p>
 
@@ -94,7 +94,7 @@ export default function WhoWeCreateFor() {
                   <hr className="mb-4 border-gray-200" />
                   <a
                     href={item.href}
-                    className="group flex items-center gap-1 text-[15px] font-medium text-[#31AC00] transition-all hover:underline"
+                    className="group flex items-center gap-1 text-[15px] font-medium text-[#31AC00] transition-all hover:underline italic"
                   >
                     {item.linkText}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
