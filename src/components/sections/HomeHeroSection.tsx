@@ -166,7 +166,7 @@ export default function CreativeAgencySection() {
           </div>
 
           {/* SERVICES */}
-          <div className="mt-10 md:mt-36">
+          <div className="mt-10 md:mt-36" id="our-services">
             <h3 className="text-[28px] font-semibold tracking-[-0.04em] text-white md:text-[34px]">
               Our Services:
             </h3>
