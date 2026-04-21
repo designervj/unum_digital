@@ -28,7 +28,7 @@ const teamMembers = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="w-full bg-[#161E23] px-4 py-16 md:px-10 md:py-24">
+        <section id="about" className="w-full bg-[#161E23] scroll-mt-32 px-4 py-16 md:px-10 md:py-18">
             <div className="mx-auto max-w-7xl">
                 {/* HERO BANNER SECTION */}
                 <div className="relative mb-16 overflow-hidden rounded-t-[15px] md:mb-24">

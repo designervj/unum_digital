@@ -32,13 +32,24 @@ const Header = () => {
 
     if (pathname === "/") {
       e.preventDefault();
+      setMobileOpen(false);
       
-      const el = document.getElementById(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+          // Small timeout to let the UI react (especially closing the mobile menu) before scrolling
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          const headerEl = document.querySelector('header');
+          const headerHeight = headerEl ? headerEl.offsetHeight : 72;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // 20px extra buffer
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 10);
     }
-    // else: let Next.js handle the /#hash navigation normally
   };
 
   if (!mounted) {
@@ -116,7 +127,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={(e) => { handleNavClick(e, item.href); setMobileOpen(false); }}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="text-[14px] font-medium text-white/90 transition-colors hover:text-white"
                 >
                   {item.name}
@@ -125,7 +136,7 @@ const Header = () => {
 
               <Link
                 href="/#lets-talk"
-                onClick={(e) => { handleNavClick(e, "/#lets-talk"); setMobileOpen(false); }}
+                onClick={(e) => handleNavClick(e, "/#lets-talk")}
                 className="mt-1 inline-flex h-[42px] w-full items-center justify-center rounded-full bg-[#49c313] px-6 text-[14px] font-semibold text-white transition-all duration-200 hover:bg-[#3eab10] sm:w-fit sm:min-w-[160px]"
               >
                 Let&apos;s Talk

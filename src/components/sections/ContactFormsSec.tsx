@@ -130,7 +130,7 @@ const ContactFormsSec: React.FC = () => {
     const labelCls = "text-[12px] font-semibold text-white/90 uppercase tracking-wider";
 
     return (
-        <section id="lets-talk" className="w-full bg-[#161E23] px-4 py-16 md:px-10 md:py-24">
+        <section id="lets-talk" className="w-full bg-[#161E23] scroll-mt-32 px-4 py-16 md:px-10 md:py-24">
             <div className="mx-auto max-w-7xl">
                 <h2 className="mb-12 text-center text-[32px] font-light text-white md:mb-16 md:text-[40px]">
                     Let's bring your stories to life!
