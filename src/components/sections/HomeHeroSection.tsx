@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -98,6 +98,8 @@ const testimonials = [
 export default function CreativeAgencySection() {
   const [activeServiceIndex, setActiveServiceIndex] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const showreelRef = useRef<HTMLDivElement>(null);
+  const [playShowreel, setPlayShowreel] = useState(false);
 
   return (
     <section className="w-full bg-[#161E23] px-4 py-6 md:px-6 md:py-0">
@@ -122,7 +124,15 @@ export default function CreativeAgencySection() {
                 </h1>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <button className="rounded-full flex items-center gap-1 border border-white/10 bg-[#0000003B] px-3 py-1.5 text-[14px] font-medium text-white backdrop-blur-sm md:px-4 md:py-2">
+                  <button 
+                    onClick={() => {
+                      setPlayShowreel(true);
+                      setTimeout(() => {
+                        showreelRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                      }, 100);
+                    }}
+                    className="rounded-full flex items-center gap-1 border border-white/10 bg-[#0000003B] px-3 py-1.5 text-[14px] font-medium text-white backdrop-blur-sm transition-all hover:bg-black/40 md:px-4 md:py-2"
+                  >
                    <span className="flex h-6 w-6 items-center justify-center rounded-full ">
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" className=" text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
                     </span>
@@ -168,6 +178,41 @@ export default function CreativeAgencySection() {
               <p className="mt-5 text-[11px] leading-[140%] text-white md:text-[18px]">
                 Our team of experts has 20+ years of design & video production experience across education, consulting, healthcare, and tourism, turning complex business goals into high-performing creative systems that grow long-term value and revenue.
               </p>
+            </div>
+          </div>
+
+          {/* SHOWREEL VIDEO */}
+          <div ref={showreelRef} className="mt-12 md:mt-24 w-full px-4 sm:px-6 md:px-0">
+            <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[18px] overflow-hidden shadow-2xl bg-[#000000]">
+              {playShowreel ? (
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/s879lJLEfW8?autoplay=1"
+                  title="Showreel"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <div 
+                  className="absolute inset-0 cursor-pointer group bg-black"
+                  onClick={() => setPlayShowreel(true)}
+                >
+                  <img
+                    src="https://img.youtube.com/vi/s879lJLEfW8/maxresdefault.jpg"
+                    alt="Showreel Thumbnail"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors duration-300">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1 opacity-90">
+                        <path d="M4 2.69C4 1.93 4.81 1.44 5.48 1.81L22.4 11.12C23.09 11.5 23.09 12.5 22.4 12.88L5.48 22.18C4.81 22.55 4 22.07 4 21.31V2.69Z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 

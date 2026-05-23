@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
 
 const bladeMark = (
   <img
@@ -20,6 +21,9 @@ const PlayIcon = ({ dark = false }: { dark?: boolean }) => (
 );
 
 const KarloBanPage = () => {
+  const [playVideo, setPlayVideo] = useState(false);
+  const videoRef = useRef<HTMLElement>(null);
+
   return (
     <div className="overflow-x-hidden bg-[#f4f4f2] text-[#2f2a28] px-4 py-8 md:px-0">
       {/* HERO */}
@@ -59,7 +63,15 @@ const KarloBanPage = () => {
                 blade Karlo Ban creates.
               </p>
 
-              <button className="mt-6 inline-flex w-fit items-center gap-3 rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/15 sm:mt-7">
+              <button
+                onClick={() => {
+                  setPlayVideo(true);
+                  setTimeout(() => {
+                    videoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  }, 100);
+                }}
+                className="mt-6 inline-flex w-fit items-center gap-3 rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/15 sm:mt-7"
+              >
                 <PlayIcon />
                 <span>Play Video</span>
               </button>
@@ -127,6 +139,20 @@ const KarloBanPage = () => {
             HrvojeFX, Doku Films, and Hrescic Agency for their professionalism
             and commitment throughout.
           </p>
+        </div>
+      </section>
+
+      {/* VIDEO SECTION */}
+      <section ref={videoRef} className="max-w-8xl mx-auto pb-12 sm:pb-14 lg:pb-16">
+        <div className="relative w-full aspect-[16/9] rounded-[18px] overflow-hidden shadow-[0_20px_60px_rgba(32,12,7,0.16)] bg-black">
+          <iframe
+            className="absolute inset-0 w-full h-full object-cover"
+            src={`https://www.youtube.com/embed/cflmfqt1zBg${playVideo ? "?autoplay=1" : ""}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
 

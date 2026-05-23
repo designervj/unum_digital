@@ -83,16 +83,14 @@ const LorealPage = () => {
                 </div>
               </>
             ) : (
-              <video
-                controls
-                autoPlay
+              <iframe
                 className="absolute inset-0 w-full h-full object-cover"
-              >
-                <source
-                  src="/assets/video/loreal-revitalift.mp4"
-                  type="video/mp4"
-                />
-              </video>
+                src="https://www.youtube.com/embed/PmQPMplV1oE?autoplay=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             )}
           </div>
 

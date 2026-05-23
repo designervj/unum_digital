@@ -62,8 +62,8 @@ const ExpoLifefarandbeyond = () => {
           {!playVideo ? (
             <>
               <img
-                src="/assets/Image/exo-bird-flight.png"
-                alt="Eagle taking flight"
+                src="/assets/Image/exo-thumbnail.png"
+                alt="Exo Life Thumbnail"
                 className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
 
@@ -85,17 +85,14 @@ const ExpoLifefarandbeyond = () => {
               </div>
             </>
           ) : (
-            <video
-              controls
-              autoPlay
+            <iframe
               className="absolute inset-0 w-full h-full object-cover"
-            >
-              {/* Placeholder video */}
-              <source
-                src="https://www.w3schools.com/html/mov_bbb.mp4"
-                type="video/mp4"
-              />
-            </video>
+              src="https://www.youtube.com/embed/t_Uk41--0Hw?autoplay=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           )}
 
         </div>
