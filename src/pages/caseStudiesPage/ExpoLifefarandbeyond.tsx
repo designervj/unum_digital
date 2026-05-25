@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const ExpoLifefarandbeyond = () => {
   const [playVideo, setPlayVideo] = useState(false);
+  const videoRef = useRef<HTMLElement>(null);
 
   return (
     <div className="min-h-screen bg-transparent flex flex-col font-inter p-4 md:p-6">
@@ -41,17 +42,41 @@ const ExpoLifefarandbeyond = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 min-h-[260px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[520px] relative">
+        <div 
+          onClick={() => {
+            setPlayVideo(true);
+            setTimeout(() => {
+              videoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 100);
+          }}
+          className="flex-1 min-h-[260px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[520px] relative group cursor-pointer overflow-hidden"
+        >
           <img
             src="/assets/Image/Rectangle 1796.png"
             alt="Desert Structure"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
           />
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+          
+          {/* Play Button Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors duration-300 shadow-lg">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="white"
+                className="ml-1 opacity-90"
+              >
+                <path d="M4 2.69C4 1.93 4.81 1.44 5.48 1.81L22.4 11.12C23.09 11.5 23.09 12.5 22.4 12.88L5.48 22.18C4.81 22.55 4 22.07 4 21.31V2.69Z" />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Bottom Section */}
-      <section className="w-full bg-[#242b33] rounded-[10px] shadow-lg flex flex-col p-4 sm:p-6 md:p-8 lg:p-10">
+      <section ref={videoRef} className="w-full bg-[#242b33] rounded-[10px] shadow-lg flex flex-col p-4 sm:p-6 md:p-8 lg:p-10">
 
         {/* Video Section */}
         <div

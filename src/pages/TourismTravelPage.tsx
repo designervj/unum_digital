@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
 
 const issueList = [
     "Heavy OTA dependency",
@@ -64,6 +65,9 @@ const GoldButton = ({ children }: { children: React.ReactNode }) => (
 );
 
 const TourismTravelPage = () => {
+    const [playVideo, setPlayVideo] = useState(false);
+    const videoRef = useRef<HTMLDivElement>(null);
+
     return (
         <div className="w-full bg-white overflow-x-hidden">
             {/* HERO SECTION */}
@@ -118,13 +122,36 @@ const TourismTravelPage = () => {
                         </div>
 
                         <div className="order-1 lg:order-2 p-[2px]">
-                            <div className="relative h-[260px] overflow-hidden sm:h-[340px] md:h-[430px] lg:h-full lg:min-h-[552px]">
+                            <div 
+                                onClick={() => {
+                                    setPlayVideo(true);
+                                    setTimeout(() => {
+                                        videoRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                                    }, 100);
+                                }}
+                                className="relative h-[260px] overflow-hidden sm:h-[340px] md:h-[430px] lg:h-full lg:min-h-[552px] group cursor-pointer rounded-[14px]"
+                            >
                                 <img
                                     src="/assets/Image/tourism-hero.png"
                                     alt="Health pharma beauty product"
-                                    className="h-full w-full object-cover object-center"
+                                    className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                                 />
-                                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_28%,rgba(255,255,255,0)_100%)]" />
+                                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_28%,rgba(255,255,255,0)_100%)] group-hover:bg-black/10 transition-colors duration-300" />
+                                
+                                {/* Play Button Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="white"
+                                            className="ml-1 opacity-90"
+                                        >
+                                            <path d="M4 2.69C4 1.93 4.81 1.44 5.48 1.81L22.4 11.12C23.09 11.5 23.09 12.5 22.4 12.88L5.48 22.18C4.81 22.55 4 22.07 4 21.31V2.69Z" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,6 +204,41 @@ const TourismTravelPage = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Video Block - Full Width */}
+                    <div ref={videoRef} className="w-full mt-4 pb-10">
+                        {playVideo ? (
+                            <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[18px] overflow-hidden shadow-xl bg-[#000000]">
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/A5Euw5nAYxo?autoplay=1"
+                                    title="Tourism Video"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        ) : (
+                            <div 
+                                className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-[18px] overflow-hidden shadow-xl bg-[#000000] cursor-pointer group"
+                                onClick={() => setPlayVideo(true)}
+                            >
+                                <img
+                                    src="https://img.youtube.com/vi/A5Euw5nAYxo/maxresdefault.jpg"
+                                    alt="Video Thumbnail"
+                                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors duration-300">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1 opacity-90">
+                                            <path d="M4 2.69C4 1.93 4.81 1.44 5.48 1.81L22.4 11.12C23.09 11.5 23.09 12.5 22.4 12.88L5.48 22.18C4.81 22.55 4 22.07 4 21.31V2.69Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
